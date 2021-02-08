@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="C:\STACKWebApp\wwwroot\css\style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <button class="tablink" onclick="openPage('Home', this, 'green')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('Doctors', this, 'green')">Doctors</button>
+  <!--<button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>-->
+  <button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+
+
+  <div id="Home" class="tabcontent">
+    <h1 class="text-center">Welcome to our database </h1>
+
+    <form action="/action_page.php" method="post">
+     
+
+      <div class="container">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    </form>
+
+  </div>
+  <div id="Doctors" class="tabcontent">
+    <h2 class="text-center">Doctors</h2>
+
+  </div>
+    <!--
+  <div id="Contact" class="tabcontent">
+    <div class="container">
+      <h3>Contact</h3>
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+        -->
+  <div id="About" class="tabcontent">
+    <h4 class="text-center">About</h4>
+    <p>
+      We’ve served this richly diverse region as a community hospital for more than 60 years. And as the area has grown, so have we. But as Long Island doctors, nurses, and healthcare professionals, we’ve never outgrown our devotion to the health of the community we all call home.
+
+      That commitment can be seen in the Knapp Cardiac Care Center, a new surgical pavilion, our level III trauma center, our women’s imaging, breast health, orthopedics, bariatrics, and so much more.
+      
+      So while we’ve updated our brand to represent our growth and the patient-first changes we’ve made, there is one thing that will never change: Our commitment to make you feel as comfortable in our home as you do in your own.
+    </p>
+  </div>
+
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+</html>
