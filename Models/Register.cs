@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations;
 namespace STACKWebApp.Models
 {
 public class Register
-     {
+      {
             [Required]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }

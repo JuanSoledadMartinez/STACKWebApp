@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using STACKWebApp.Models;
-using STACKWebApp.ViewModel;
 using System.Web;
-using System.Web.Mvc;
-using System.Web.Security;
+//using System.Web.Mvc;
+//using System.Web.Security;
 
 
 namespace STACKWebApp.Controllers
-{
+{/*
     public class AccountController : Controller
     {
         public ActionResult Index()
@@ -118,7 +117,6 @@ namespace STACKWebApp.Controllers
             Session.Abandon(); // it will clear the session at the end of request
             return RedirectToAction("Index");
         }
-    }
+    }*/
 }
-}
-}
+
