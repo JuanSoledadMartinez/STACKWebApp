@@ -1,6 +1,8 @@
 
 use StacDB;
 
+drop table s
+
 Select * from DoctorDB;
 create table DoctorDB (DoctorID int primary key, DoctorFName varchar(15),
 					DoctorLName varchar(15), DoctorLocation varchar(20), 
