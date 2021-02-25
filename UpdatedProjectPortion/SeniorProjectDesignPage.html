@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <button class="tablink" onclick="openPage('Home', this, 'green')" id="defaultOpen">Home</button>
+  <button class="tablink" onclick="openPage('Doctors', this, 'green')">Doctors</button>
+  <button class="tablink" onclick="openPage('Appointments', this, 'green')">Appointments</button>
+  <button class="tablink" onclick="openPage('Contact', this, 'green')">Contact</button>
+  <button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+
+
+  <div id="Home" class="tabcontent">
+
+
+    <form action="/action_page.php" method="post">
+
+
+      <div class="home-wrapper">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+      </div>
+    </form>
+
+  </div>
+  <div id="Doctors" class="tabcontent">
+
+  </div>
+
+  <div id="Appointments" class="tabcontent">
+    <div class="appointment-wrapper">
+
+      <form action="/action_page.php">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name..">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your emial..">
+
+        <label for="AppointmentType">Appointment Type</label>
+        <input type="text" id="AppointmentType" name="AppointmentType" placeholder="Type of appointment">
+        </select>
+
+        <label for="reason">Reason</label>
+        <input type="text" id="reason" name="Reason" placeholder="Reason..">
+        </select>
+
+        <label for="calender">Calender</label>
+        <input type="date" id="calender" name="calender" placeholder="Pick a date..">
+
+        <label for="Insurance">Insurance</label>
+        <input type="text" id="insurance" name="insurance" placeholder="Your insurance..">
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <div id="Contact" class="tabcontent">
+    <div class="contact-wrapper">
+    
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+
+  <div id="About" class="tabcontent">
+   
+    <p>
+     
+
+    </p>
+  </div>
+
+
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
+</body>
+
+</html>
