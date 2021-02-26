@@ -30,7 +30,10 @@ namespace StacWebApp.Controllers
         {
             return View();
         }
-
+        public IActionResult Appointment()
+        {
+            return View();
+        }
         public IActionResult Privacy()
         {
             return View();
